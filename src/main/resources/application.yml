@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active: prod
+  config:
+    import:
+      "configserver:http://config-server:8888"
+
+  cloud:
+    config:
+      uri: http://config-server:8888
+      fail-fast: true
+      retry:
+        initial-interval: 3000
+        max-interval: 5000
+        max-attempts: 5
+      name: notification-service
+
+    consul:
+      host: ${CONSUL_HOST:consul-server}
+      port: ${CONSUL_PORT:8500}
+      discovery:
+        service-name: ${SPRING_APPLICATION_NAME:notification-service}
+        instance-id: ${spring.application.name:notification-service}:${server.port}
+        prefer-ip-address: true
+        health-check-path: ${MANAGEMENT_ENDPOINT_BASE_PATH:/actuator}/health
+        health-check-interval: 10s
