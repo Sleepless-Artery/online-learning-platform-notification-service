@@ -22,5 +22,5 @@ spring:
         service-name: ${SPRING_APPLICATION_NAME:notification-service}
         instance-id: ${spring.application.name:notification-service}:${server.port}
         prefer-ip-address: true
-        health-check-path: ${MANAGEMENT_ENDPOINT_BASE_PATH:/actuator}/health
+        health-check-path: ${MANAGEMENT_ENDPOINT_BASE_PATH:/internal/actuator}/health
         health-check-interval: 10s
