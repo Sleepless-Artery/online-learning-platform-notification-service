@@ -18,6 +18,7 @@ git clone https://github.com/Sleepless-Artery/online-learning-platform-notificat
 - Spring Boot
 - Spring Cloud
 - Spring Mail
+- Kafka
 - YML
 - Maven
 - Docker
