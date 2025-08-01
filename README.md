@@ -12,9 +12,12 @@ git clone https://github.com/Sleepless-Artery/online-learning-platform-notificat
 ## Требования
 - Java 17+
 - Maven 3.9.x
+- Docker
 ## Технологии
 - Java
 - Spring Boot
 - Spring Cloud
 - Spring Mail
-- Flyway
+- YML
+- Maven
+- Docker
