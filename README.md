@@ -8,7 +8,7 @@ git clone https://github.com/Sleepless-Artery/online-learning-platform-notificat
 ```
 Перейдите в командной строке в каталог проекта и выполните сборку:
 ```bash
-maven clean install
+mvn clean install
 ```
 Перейдите по следующим ссылкам и выполните описанные шаги:
 - [Репозиторий конфигураций микросервисов](https://github.com/Sleepless-Artery/online-learning-platform-configs)
