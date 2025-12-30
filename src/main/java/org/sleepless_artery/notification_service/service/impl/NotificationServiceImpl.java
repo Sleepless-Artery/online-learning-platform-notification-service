@@ -31,11 +31,12 @@ public class NotificationServiceImpl implements NotificationService {
 
         log.info("Sending email notification to {}", emailDetails.getRecipient());
         try {
-            SimpleMailMessage message = new SimpleMailMessage();
+            var message = new SimpleMailMessage();
             message.setFrom(fromEmail);
             message.setTo(emailDetails.getRecipient());
             message.setSubject(emailDetails.getSubject());
             message.setText(emailDetails.getBody());
+
             mailSender.send(message);
             log.info("Email sent successfully to {}", emailDetails.getRecipient());
         } catch (MailException e) {
